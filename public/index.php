@@ -2,6 +2,26 @@
 
 require '../vendor/autoload.php';
 
+// мини роутинг
+/* if($_SERVER['REQUEST_URI'] == '/home') {
+        require '../app/controllers/homepage.php'
+} */
+
+
+
+//exit;
+/*  ---------------------------------------------------- */
+use App\QueryBuilder;
+
+/* $my = new QueryBuilder();
+
+$www = $my->mass;
+var_dump($www);
+exit; */
+/* ------------------------------------------------------ */
+
+
+
 use Aura\SqlQuery\QueryFactory;
 
 $queryFactory = new QueryFactory('mysql');  // создание Экземпляра класса 
@@ -10,7 +30,7 @@ $queryFactory = new QueryFactory('mysql');  // создание Экземпля
 $select = $queryFactory->newSelect();  // Создайте запрос Select, используя следующие методы.
 
 $select->cols(['*'])     // Чтобы добавить столбцы в выборку, используйте метод cols().'*'
-        ->from('groups');    // по цепочке, вызываем следующий метод
+        ->from('email_list');    // по цепочке, вызываем следующий метод
 
 //var_dump($select->getStatement()); // получаем, готовый sql-запрос
 
