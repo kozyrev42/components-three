@@ -3,8 +3,8 @@
 use App\QueryBuilder;   //   подключаем ПространствоИмён\Компонент
 
 $db = new QueryBuilder();
-//
-//$data = $db->getAll('email_list');     //  запрос "показать Всё" 
+//запрос "показать Всё" 
+$data = $db->getAll('email_list');
 
 //
 /* $db->insert('email_list',[
@@ -17,6 +17,6 @@ $db = new QueryBuilder();
 //$db->update('email_list', '55', ['first_name' => 'zzz']);
 
 // удаление по условию
-$db->delete('email_list', 999999999);
+//$db->delete('email_list', '22 еще е');
 
 //var_dump($data);
